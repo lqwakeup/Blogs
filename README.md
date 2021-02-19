@@ -1,16 +1,16 @@
 ---
 home: true
-heroText: vuepress-theme-reco
-tagline: A simple and beautiful vuepress blog theme.
-# heroImage: /hero.png
-# heroImageStyle: {
-#   maxWidth: '600px',
-#   width: '100%',
-#   display: block,
-#   margin: '9rem auto 2rem',
-#   background: '#fff',
-#   borderRadius: '1rem',
-# }
+heroText: QX's blog
+tagline: 满怀希望，就会所向披靡.
+heroImage: /img/hero.png
+heroImageStyle: {
+  maxWidth: '1275.33px',
+  width: '1300px',
+  display: block,
+  margin: '9rem auto 2rem',
+  background: '#fff',
+  borderRadius: '1rem',
+}
 bgImageStyle: {
   height: '450px'
 }
