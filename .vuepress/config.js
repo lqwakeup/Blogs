@@ -2,7 +2,7 @@ module.exports = {
   "base":"/Blogs/",
   "title": "XQ's blog",
   "description": "",
-  "dest": "public",
+  "dest": ".vuepress/dist",
   "head": [
     [
       "link",
