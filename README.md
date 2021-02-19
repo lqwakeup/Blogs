@@ -1,6 +1,6 @@
 ---
 home: true
-heroText: null
+# heroText: null
 # tagline: 满怀希望，就会所向披靡.
 heroImage: /img/hero.png
 heroImageStyle: {
