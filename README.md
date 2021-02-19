@@ -1,7 +1,7 @@
 ---
 home: true
-heroText: QX's blog
-tagline: 满怀希望，就会所向披靡.
+heroText: null
+# tagline: 满怀希望，就会所向披靡.
 heroImage: /img/hero.png
 heroImageStyle: {
   maxWidth: '1275.33px',
