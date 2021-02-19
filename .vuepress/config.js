@@ -1,14 +1,14 @@
 module.exports = {
   "base":"/Blogs/",
-  "title": "",
+  "title": "XQ's blog",
   "description": "",
-  "dest": ".vuepress/dist",
+  "dest": "public",
   "head": [
     [
       "link",
       {
         "rel": "icon",
-        "href": "/favicon.ico"
+        "href": "/img/favicon.ico"
       }
     ],
     [
@@ -23,33 +23,39 @@ module.exports = {
   "themeConfig": {
     "nav": [
       {
-        "text": "Home",
+        "text": "主页",
         "link": "/",
         "icon": "reco-home"
       },
       {
-        "text": "TimeLine",
+        "text": "时间线",
         "link": "/timeline/",
         "icon": "reco-date"
       },
       {
-        "text": "Docs",
+        "text": "心情",
         "icon": "reco-message",
-        "items": [
-          {
-            "text": "vuepress-reco",
-            "link": "/docs/theme-reco/"
-          }
-        ]
+        "link": "/docs/theme-reco/"
+        // "items": [
+        //   {
+        //     "text": "vuepress-reco",
+        //     "link": "/docs/theme-reco/"
+        //   }
+        // ]
       },
       {
-        "text": "Contact",
+        "text": "关于我",
         "icon": "reco-message",
         "items": [
           {
             "text": "GitHub",
-            "link": "https://github.com/recoluan",
-            "icon": "reco-github"
+            "link": "https://github.com/lqwakeup",
+            // "icon": "reco-github"
+          },
+          {
+            "text":"bilibili",
+            "link":"https://space.bilibili.com/36482887",
+            // "icno":"/bilibili.png"
           }
         ]
       }
@@ -57,21 +63,19 @@ module.exports = {
     "sidebar": {
       "/docs/theme-reco/": [
         "",
-        "theme",
-        "plugin",
-        "api"
+        "theme"
       ]
     },
     "type": "blog",
     "blogConfig": {
       "category": {
         "location": 2,
-        "text": "Category"
+        "text": "前端"
       },
-      "tag": {
-        "location": 3,
-        "text": "Tag"
-      }
+      // "tag": {
+      //   "location": 3,
+      //   "text": "Tag"
+      // }
     },
     "friendLink": [
       {
@@ -87,14 +91,14 @@ module.exports = {
         "link": "https://vuepress-theme-reco.recoluan.com"
       }
     ],
-    "logo": "/logo.png",
+    "logo": "/img/qiao.png",
     "search": true,
     "searchMaxSuggestions": 10,
     "lastUpdated": "Last Updated",
     "author": "",
-    "authorAvatar": "/avatar.png",
-    "record": "xxxx",
-    "startYear": "2017"
+    "authorAvatar": "/img/qiao.png",
+    // "record": "xxxx",
+    "startYear": "2020"
   },
   "markdown": {
     "lineNumbers": true
