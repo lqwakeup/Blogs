@@ -56,6 +56,10 @@ module.exports = {
             "text":"bilibili",
             "link":"https://space.bilibili.com/36482887",
             // "icno":"/bilibili.png"
+          },
+          {
+            "text":"阮一峰老师ES6",
+            "link":"https://es6.ruanyifeng.com/#README"
           }
         ]
       }
@@ -77,20 +81,20 @@ module.exports = {
       //   "text": "Tag"
       // }
     },
-    "friendLink": [
-      {
-        "title": "午后南杂",
-        "desc": "Enjoy when you can, and endure when you must.",
-        "email": "1156743527@qq.com",
-        "link": "https://www.recoluan.com"
-      },
-      {
-        "title": "vuepress-theme-reco",
-        "desc": "A simple and beautiful vuepress Blog & Doc theme.",
-        "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-        "link": "https://vuepress-theme-reco.recoluan.com"
-      }
-    ],
+    // "friendLink": [
+    //   {
+    //     "title": "午后南杂",
+    //     "desc": "Enjoy when you can, and endure when you must.",
+    //     "email": "1156743527@qq.com",
+    //     "link": "https://www.recoluan.com"
+    //   },
+    //   {
+    //     "title": "vuepress-theme-reco",
+    //     "desc": "A simple and beautiful vuepress Blog & Doc theme.",
+    //     "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
+    //     "link": "https://vuepress-theme-reco.recoluan.com"
+    //   }
+    // ],
     "logo": "/img/qiao.png",
     "search": true,
     "searchMaxSuggestions": 10,
