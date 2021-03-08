@@ -18,6 +18,7 @@ categories:
 
 - 样式的类名指定不要用class,要用className
 
+- 内联样式,要用mustache的形式去写
 - 虚拟DOM必须只有一个根标签
 - 标签必须闭合
 - 标签首字母   
