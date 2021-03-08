@@ -14,3 +14,4 @@ categories:
 - 定义虚拟DOM时，不要写引号
 - 标签中混入js表达式时需要用{}
 - 样式的类名指定不要用class,要用className
+- 内联样式,要用`style = {{key:value}}`的形式去写
