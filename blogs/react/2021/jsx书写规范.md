@@ -13,3 +13,4 @@ categories:
 - 需要引入babel库，在脚本文件中，这样写`<script type='text/babel'></script>`，babel可以将ES6转化为ES5 ，也可以将jsx文件转化为js
 - 定义虚拟DOM时，不要写引号
 - 标签中混入js表达式时需要用{}
+- 样式的类名指定不要用class,要用className
