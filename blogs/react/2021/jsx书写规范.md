@@ -12,3 +12,13 @@ categories:
 
 - 需要引入babel库，在脚本文件中，这样写`<script type='text/babel'></script>`，babel可以将ES6转化为ES5 ，也可以将jsx文件转化为js
 - 定义虚拟DOM时，不要写引号
+- 标签中混入js表达式时需要用{}
+- 样式的类名指定不要用class,要用className
+- 内联样式,要用`style = {{key:value}}`的形式去写
+- 虚拟DOM必须只有一个根标签
+- 标签必须闭合
+- 标签首字母   
+
+  （1）若小写字母开头,则将该标签转为html中的同名元素,若html中无该标签队对应的同名元素,则报错
+
+  （2）若大写字母开头,react就去渲染对应的组件,若组件没有定义,则报错
