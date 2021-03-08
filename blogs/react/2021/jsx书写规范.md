@@ -11,5 +11,4 @@ categories:
 刚刚开始学，还没有学到脚手架，先说一下用来写react推荐的jsx语法，用它有以下几个需要注意的点：
 
 - 需要引入babel库，在脚本文件中，这样写`<script type='text/babel'></script>`，babel可以将ES6转化为ES5 ，也可以将jsx文件转化为js
-
-  
+- 定义虚拟DOM时，不要写引号
