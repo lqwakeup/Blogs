@@ -179,4 +179,4 @@ Promise.newAllSettled = function (promiseArr) {
 ```
 
 还有一些其他的方法。下面这位大大有写
-[promise所有方法的实现](https://zhuanlan.zhihu.com/p/107712626)
+[promise所有方法的实现](https://zhuanlan.zhihu.com/p/232805664)
