@@ -45,6 +45,74 @@ for(var i = 0;i<5;i++){
 
 
 
+```js
+var a = 1;
+function foo() {
+	a = 10;
+	console.log(a);
+	return;
+}
+foo();
+console.log(a);// 10 10
+--------------------------------
+var a = 1;
+function foo() {
+	var a = 10;
+	console.log(a);
+	return;
+}
+foo();
+console.log(a);// 10 1
+--------------------------------
+var a = 1;
+function foo() {
+	a = 10;
+	console.log(a);
+	return;
+    function a() {};
+}
+foo();
+console.log(a);// 10 1
+
+```
+
+解答：输出结果如上图
+
+首先，第一个，在函数外var a = 1，在函数里面a直接赋值10，那么的话在这里改变a,就相当于改变了全局的a，所以这时候结果是10，10。
+
+第二个，a是函数作用域里面的值，函数执行完了里面的a被销毁，所以此时结果为10，1。
+
+第三个，在foo函数里面a函数声明提升，此时相当于a在foo作用域里面，这时候将变量a赋值为10，那这时候a也不会改变外面的a，所以，结果打印为10 1。
+
+
+
+```js
+console.log(bar);         // f bar() { console.log(123) }
+console.log(bar());       // undefined
+var bar = 456;
+function bar() {
+    console.log(123);     // 123
+}
+console.log(bar);         // 456
+bar = 789;
+console.log(bar);         // 789
+console.log(bar())        // bar is not a function
+```
+
+解答：输入结果如上图
+
+这题需要注意的一点：**函数声明的提升优先于变量提升！！！**所以在这里function bar() 被提到了最上面。
+
+所以第一行打印函数。
+
+由于调用函数bar没有返回值，所以直接console.log(bar())输出的是undefined。但是在函数体内有一句打印123，在调用后，这一句会调用123。
+
+之后bar又被变量重新赋值，故后面打印456，789。
+
+此时bar已经不是函数，不能被调用，因此最后一句会抛出一个错误，表明bar不是一个函数。
+
+
+
 
 
 
