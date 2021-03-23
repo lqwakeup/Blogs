@@ -113,6 +113,69 @@ console.log(bar())        // bar is not a function
 
 
 
+```js
+var a = [];
+for(let i=0;i<10;i++){
+	a[i] = function() {
+		console.log(i);
+	}
+}
+
+a[6]();//6
+
+-------------------------------
+
+var a = [];
+for(var i=0;i<10;i++){
+	a[i] = function() {
+		console.log(i);
+	}
+}
+
+a[6]();//10
+```
+
+解答：输入结果如上图
+
+这题考查的内容：let和var的作用域。第一个，for循环中使用let关键字，let有块级作用域，所以每个i只在当前循环有效，每次循环的i其实都是一个新的变量，于是最后输出的是6。第二题，for循环中使用var关键字，i是全局的，循环中相当于使用了一个全局变量i，所以到最后，输出的值都是最终的i值，结果为10。
+
+
+
+```JS
+for(let i=0;i<3;i++){
+	var i = 'abc'
+	console.log(i)
+}
+// SyntaxError: Identifier 'i' has already been declared
+
+
+for(var i=0;i<3;i++){
+	var i = 'abc'
+	console.log(i)
+}
+// abc
+
+for(var i=0;i<3;i++){
+	let i = 'abc'
+	console.log(i)
+}
+// abc
+// abc
+// abc
+
+for(let i=0;i<3;i++){
+	let i = 'abc'
+	console.log(i)
+}
+// abc
+// abc
+// abc
+```
+
+解答：输入结果如上图
+
+考查作用域。
+
 
 
 
