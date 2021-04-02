@@ -92,4 +92,44 @@ console.log(selectSort(arr))
 
 插入排序的平均时间复杂度为 O(n²) ，最坏时间复杂度为 O(n²) ，空间复杂度为 O(1) ，是稳定排序。
 
+详细资料可以参考： [《图解排序算法(一)](https://www.cnblogs.com/chengxiao/p/6103002.html)
+
+
+
+> 插入排序
+
+直接插入排序基本思想是每一步将一个待排序的记录，插入到前面已经排好序的有序序列中去，直到插完所有元素为止。
+
+插入排序核心--扑克牌思想： 就想着自己在打扑克牌，接起来一张，放哪里无所谓，再接起来一张，比第一张小，放左边， 继续接，可能是中间数，就插在中间....依次
+
+代码实现：
+
+```js
+let arr = [5,3,4,1,2];
+
+function insertSort(arr) {
+	if(!Array.isArray(arr)) return;
+	
+	let length = arr.length;
+	for(let i=1;i<length;i++) {
+		let temp = arr[i];
+		let j = i;
+		while(j-1>=0 && arr[j-1]>temp) {
+			arr[j] = arr[j-1];
+			j--;
+		}
+		
+		arr[j] = temp;
+	}
+	
+	return arr;
+}
+
+console.log(insertSort(arr))
+```
+
+当排序序列为已排序序列时，为最好的时间复杂度 O(n)。
+
+插入排序的平均时间复杂度为 O(n²) ，最坏时间复杂度为 O(n²) ，空间复杂度为 O(1) ，是稳定排序。
+
 详细资料可以参考： [《图解排序算法(一)》](https://www.cnblogs.com/chengxiao/p/6103002.html)
