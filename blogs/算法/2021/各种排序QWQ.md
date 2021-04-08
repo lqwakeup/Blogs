@@ -133,3 +133,47 @@ console.log(insertSort(arr))
 插入排序的平均时间复杂度为 O(n²) ，最坏时间复杂度为 O(n²) ，空间复杂度为 O(1) ，是稳定排序。
 
 详细资料可以参考： [《图解排序算法(一)》](https://www.cnblogs.com/chengxiao/p/6103002.html)
+
+
+
+> 快速排序
+
+快速排序的基本思想是通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据 都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。
+
+代码实现：
+
+```js
+let arr = [23,1,332,3523,4,45,234];
+
+function quickSort(arr,left,right) {
+    if(left>=right) {
+        return arr;
+    }
+    
+    let i = left, j = right;
+    let base = arr[left];
+    
+    while(i<j){
+        while(i<j && arr[j]>=base){
+            j--;
+        }
+        while(i<j && arr[i]<=base){
+            i++;
+        }
+        if(i<j) {
+            [arr[i],arr[j]] = [arr[j],arr[i]];
+        }
+    }
+    
+    arr[left] = arr[i];
+    arr[i] = base;
+    
+    quickSort(arr,left,i-1);
+    quickSort(arr,i+1,right);
+    
+    return arr;
+}
+
+console.log(quickSort(arr))
+```
+
