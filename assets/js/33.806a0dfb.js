@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[33],{527:function(t,e,n){"use strict";n.r(e);var s=n(6),r=Object(s.a)({},(function(){var t=this.$createElement,e=this._self._c||t;return e("ContentSlotsDistributor",{attrs:{"slot-key":this.$parent.slotKey}},[e("p",[this._v("react组件间的通信跟vue有些相似性，却更加灵活。下面说说它们各级是如何实现通信的吧！")])])}),[],!1,null,null,null);e.default=r.exports}}]);
