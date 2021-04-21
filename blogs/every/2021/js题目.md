@@ -176,6 +176,28 @@ for(let i=0;i<3;i++){
 
 考查作用域。
 
+```js
+let object = {a:1};
+function fun(obj) {
+	//console.log(obj,object);
+	//console.log(obj === object)
+	obj.a = 1;
+	//console.log(obj,object);
+	//console.log(obj === object)
+	obj = {a:2};
+	//console.log(obj,object);
+	//console.log(obj === object)
+	obj.b = 2;
+}
+			
+fun(object);
+console.log(object);//{a:1}
+```
+
+解答：输入结果如上图
+
+上面注释的部分可以很明显地看到这个这个过程。最初，直接在对象上添加一个属性，形参和实参的地址是相同的，所以改变obj，也会相应的改变object的值，但是在第二步，直接将一个地址赋给了obj，这时，形参和实参的指向就不同了，改变形参的值并不会对实参产生什么影响，所以从第二步往后，形参的改变都不会影响实参，所以，最后object的值只有第一步改变了。
+
 
 
 
