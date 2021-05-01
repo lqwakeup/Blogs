@@ -143,38 +143,34 @@ console.log(insertSort(arr))
 代码实现：
 
 ```js
-let arr = [23,1,332,3523,4,45,234];
-
-function quickSort(arr,left,right) {
-    if(left>=right) {
-        return arr;
-    }
-    
-    let i = left, j = right;
-    let base = arr[left];
-    
-    while(i<j){
-        while(i<j && arr[j]>=base){
-            j--;
-        }
-        while(i<j && arr[i]<=base){
-            i++;
-        }
-        if(i<j) {
-            [arr[i],arr[j]] = [arr[j],arr[i]];
-        }
-    }
-    
-    arr[left] = arr[i];
-    arr[i] = base;
-    
-    quickSort(arr,left,i-1);
-    quickSort(arr,i+1,right);
-    
-    return arr;
+function quickSort(array) {
+	function recursion(arr, left = 0, right = arr.length - 1) {
+		if (left >= right) {
+			return;
+		}
+		let i = left;
+		let j = right;
+		const baseValue = arr[i];
+		while (i < j) {
+			while (i < j && baseValue <= arr[j]) {
+				j--;
+			}
+			// arr[i] = arr[j];
+			while (i < j && baseValue >= arr[i]) {
+				i++;
+			}
+			// arr[j] = arr[i];
+			[arr[i], arr[j]] = [arr[j], arr[i]]
+		}
+		arr[j] = baseValue;
+		recursion(arr, left, i - 1);
+		recursion(arr, i + 1, right);
+	}
+	let nowArr = array.slice(0);
+	recursion(nowArr);
+	return nowArr;
 }
-
-console.log(quickSort(arr))
+console.log(quickSort([4, 8, 1, 9, 2, 7, 6, 4, 5, 2, 14, 12, 4]));
 ```
 
 这一种方法是填空法，首先将第一个位置的数作为枢纽值，然后 end 指针向前移动，当遇到比枢纽值小的值或者 end 值 等于 start 值的时候停止，然后将这个值填入 start 的位置，然后 start 指针向后移动，当遇到比枢纽值大的值或者 start 值等于 end 值的时候停止，然后将这个值填入 end 的位置。反复循环这个过程，直到 start 的值等于 end 的 值为止。将一开始保留的枢纽值填入这个位置，此时枢纽值左边的值都比枢纽值小，枢纽值右边的值都比枢纽值大。然后在递 归左右两边的的序列。
