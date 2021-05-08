@@ -1,5 +1,5 @@
 ---
-title: 各种排序QAQ
+title: 各种排序
 date: 2021-04-01
 tags:
  - 算法
