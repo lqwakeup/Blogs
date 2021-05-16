@@ -739,7 +739,7 @@ obj.getData();
 
 ### 4.1. 面试题一：
 
-```
+```js
 var name = "window";
 var person = {
   name: "person",
@@ -773,7 +773,7 @@ function sayName() {
 
 ### 4.2. 面试题二：
 
-```
+```js
 var name = 'window'
 var person1 = {
   name: 'person1',
@@ -843,7 +843,7 @@ person1.foo4().call(person2) // person1
 
 ### 4.3. 面试题三:
 
-```
+```js
 var name = 'window'
 function Person (name) {
   this.name = name
@@ -910,7 +910,7 @@ person1.foo4().call(person2) // person1
 
 ### 4.4. 面试题四：
 
-```
+```js
 var name = 'window'
 function Person (name) {
   this.name = name
